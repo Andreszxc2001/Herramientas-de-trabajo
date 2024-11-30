@@ -23,25 +23,20 @@ section h2 {
 
 section .seccion {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;  /* Mantiene los elementos en fila */
+    flex-wrap: wrap;      /* Permite que los elementos se envuelvan */
+    align-items: flex-start;
     justify-content: center;
-    margin: 0px auto;
-    width: 60%;
+    width: 90%;
     margin: 10px auto;
-    border-radius: 1rem;
+    gap: 10px;  /* Espacio entre los elementos */
 }
+
 .tools {
-    background-color: var(--links);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto;
-    width: 60%;
-    margin: 10px auto;
-    border-radius: 1rem;
-    padding: 5px 5px 5px 5px;
+    flex: 0 1 calc(20% - 10px);  /* Divide en 5 columnas */
+    margin: 5px;
+    max-width: 200px;  /* Puedes ajustar el ancho máximo */
+    box-sizing: border-box;  /* Incluye padding y border en el ancho total */
 }
 
 .content {
