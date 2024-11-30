@@ -6,62 +6,104 @@ h1 {
 }
 
 section {
-    background-color: var(--textos);
+    background-color:#ffffff65;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 40px 0;
+    width: 90%;
     margin: 30px auto;
-    width: 80%;
-    border-radius: 1rem;
-}
-section h2 {
-    color: var(--Fondo);
-    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
+section h2 {
+    color: var(--Fondo);
+    margin: 20px 0 30px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
 
 section .seccion {
     display: flex;
-    flex-direction: row;  /* Mantiene los elementos en fila */
-    flex-wrap: wrap;      /* Permite que los elementos se envuelvan */
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 90%;
-    margin: 10px auto;
-    gap: 10px;  /* Espacio entre los elementos */
+    gap: 20px;
+    width: 95%;
 }
 
 .tools {
-    flex: 0 1 calc(20% - 10px);  /* Divide en 5 columnas */
-    margin: 5px;
-    max-width: 200px;  /* Puedes ajustar el ancho máximo */
-    box-sizing: border-box;  /* Incluye padding y border en el ancho total */
+    flex: 0 1 calc(33.333% - 40px);  /* Ajuste para 3 columnas */
+    background-color: var(--Fondo);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    height: 500px;  /* Altura fija para alinear contenedores */
+    display: flex;
+    flex-direction: column;
+}
+
+.tools:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 0px auto;
-    width: 60%;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 
 .content h3 {
-    text-align: center;
     color: white;
-    font-size: 25px;
-}
-
-.content a {
-    text-align: center;
-    color:var(--textos);
-    font-size: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
 .content a img {
-    width: 70px;
-    height: 70px;
+    width: 120px;
+    height: 120px;
     border-radius: 1rem;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    border: 3px solid white;
+}
+
+.content a img:hover {
+    transform: scale(1.1);
+}
+
+.content a {
+    color: var(--textos);
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.content a:hover {
+    color: var(--Fondo);
+}
+
+.content h4 {
+    color: white;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.content p {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 10px;
+    text-align: center;
 }
